@@ -1,9 +1,9 @@
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Helvetica, sans-serif;
     background-color: #e8e0c4;
-    margin: 0;
-    padding: 0;
     color: #333;
+    margin: 0;
 }
 
 .navbar {
@@ -18,91 +18,101 @@ body {
 .navbar a {
     color: #fff;
     text-decoration: underline;
-    padding: 15px 20px;
+    padding: 15px 40px;
     font-weight: bold;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 100%px;
     margin: 50px auto;
-    padding: 20px;
+    padding: 8px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.text-content {
-    max-width: 40%;
-    margin-right: 100px; 
+.profile-content {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-template-areas: 
+   "greet picture"
+   "name picture"
+   "qoute picture"
+   "author picture"
+   "button picture";
+}
+
+.profile-pic{
+    border-radius: 50%;
+    width: 580px;
+    height: 460px;
+    object-fit: cover;
+    border: 5px solid white;
+    margin-left: 90px;
+}
+
+.profile-picture {
+    grid-area: picture;
 }
 
 h1 {
     font-size: 2.5em;
-    margin: 0;
+    margin: 0 100px;
+    grid-area: greet;
 }
 
 .name {
+    top: 40px;
     font-weight: bold;
-    font-size: 4em;
+    font-size: 3em;
+    margin: 0 100px;
     text-decoration: underline;
-    margin-bottom: 20px;
     color: black;
+    grid-area: name;
 }
 
 .quote {
-    font-size: 1.5em;
-    margin: 20px 0; 
+    font-size: 1em;
+    margin: 0 100px;
+    grid-area: qoute;
 }
 
 .quote-author {
-    font-size: 1.3em;
-    text-align: right;
+    font-size: 1em;
+    text-align: center;
     margin-top: 10px;
-
+    grid-area: author;
 }
 
 .about-button {
     display: inline-block;
+    width: 40%;
     padding: 15px 40px;
     background-color: #816C61;
     color: #fff;
-    transition: background-color 0.3s ease;
     border: 5px solid white;
     font-size: 1.4em;
     text-align: center;
-    margin-top: 50px;
+    margin: 0 90px;
+    text-decoration: none;
+    grid-area: button;
 }
 
-.about-button:hover {
-    background-color: #6c5a52;
-}
-
-.profile-pic {
-    border-radius: 50%;
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
-    border: 5px solid white;
-    margin-left: 50px; 
-}
 
 .social-icons {
-    border: 3px solid black;
     display: flex;
     justify-content: center;
     background-color: #131b237b;
     padding: 10px 0;
-    position: fixed;  
-    width: 100%;      
-    bottom: 0;       
-    left: 0;         
+    border: 3px solid black;
 }
 
+
 .social-icons a {
-    text-decoration: none;
     color: #333;
     margin: 0 20px;
-    font-size: 2em;
 }
 
 .social-icons a img {
@@ -110,9 +120,119 @@ h1 {
     height: 60px;
 }
 
+@media (max-width: 1080px) {
+    body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        overflow: hidden;
+    }
 
-@media (min-width:600px) {
-    body{
-        background-color: antiquewhite;
+    .navbar { 
+        position: fixed;
+        top: 0;
+        width: 100%;
+        justify-content: space-around;
+        padding: 10px 5px;
+        background-color: #816C61;
+        border-bottom: 1px solid black;
+    }
+
+
+   
+    .profile-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "greet picture"
+        "name picture"
+        "qoute qoute"
+        "author author"
+        "button button"
+        ;
+    }
+
+    .profile-pic {
+        height: 200vh;
+    }
+ 
+
+
+    .navbar a { 
+        padding: 10px 8px;
+        font-size: 10px;
+    }
+
+    
+    .text-content h1 {
+        font-size: 1rem;
+    }
+    
+    .greeting {
+        font-size: 1.2em;
+        margin-left: 40px;
+        margin-top: 70px;
+      
+    }
+    
+    .name {
+        font-size: 1.4em;
+        margin-left: 40px;
+        margin-bottom: 60px;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    
+    .quote {
+        font-size: 0.9em;
+        margin: 35px 0 0 10px;
+        text-align: justify; 
+    }
+    
+    .quote-author {
+        font-size: 0.8em;
+        margin-top: 10px 0 10p, 20px; 
+        text-align: right;
+    }
+    
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-top: 50px;
+        margin-left: -90px;
+    }
+    
+    .about-button {
+        padding: 10px 50px;
+        font-size: 1.2em;
+        margin: -20px 10px auto 0; 
+    }
+    
+
+    .social-icons { 
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 5px;
+        background-color: #131b237b;
+        border: 3px solid black;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .social-icons a { 
+        font-size: 1.5em;
+        margin: 0 10px;
+    }
+
+    .social-icons a img {
+        border: 2px solid black;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
     }
 }

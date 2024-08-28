@@ -1,74 +1,137 @@
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E7DFC6;
+    color: #333;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f3ecd8;
-            color: #333;
-        }
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #816C61;
+    padding: 10px;
+    border: 3px solid black;
+}
 
-        .navbar {
-            display: flex;
-            justify-content: center;
-            background-color: #816C61;
-            padding: 10px;
-            justify-content: flex-end;
-            border: 3px solid black;
-        }
+.navbar a {
+    color: #fff;
+    text-decoration: underline;
+    padding: 15px 40px;
+    font-weight: bold;
+}
 
-        .navbar a {
-            color: #fff;
-            text-decoration: underline;
-            padding: 15px 20px;
-            font-weight: bold;
-        }
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
 
-        .container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 40px;
-        }
+.profile-pic {
+    border-radius: 50%;
+    width: 390px;
+    height: 430px;
+    object-fit: cover;
+    margin-right: 100px; 
+    border: 5px solid white;
+    transform: translateY(20px);
+}
 
-        .profile-pic {
-            border-radius: 50%;
-            width: 390px;
-            height: 430px;
-            object-fit: cover;
-            margin-right: 100px; 
-            border: 5px solid white;
-            transform: translateY(60px)
-            
-        }
+.description {
+    max-width: 600px;
+    text-align: justify;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 80px;
+}
 
-        .description {
-            max-width: 600px;
-            text-align: justify;
-            font-size: 18px;
-            line-height: 1.5;
-            margin-top: 120px ;
-        }
+.social-icons {
+    display: flex;
+    justify-content: center;
+    background-color: #131b237b;
+    padding: 10px 0;
+    border: 3px solid black;
+}
 
-        .social-icons {
-            border: 3px solid black;
-            display: flex;
-            justify-content: center;
-            background-color: #131b237b;
-            padding: 10px 0;
-            position: fixed;  
-            width: 100%;      
-            bottom: 0;       
-            left: 0;         
-        }
+.social-icons a {
+    color: #333;
+    margin: 0 20px;
+}
 
-        .social-icons a {
-            text-decoration: none;
-            color: #333;
-            margin: 0 20px;
-            font-size: 2em;
-        }
+.social-icons a img {
+    width: 60px;
+    height: 60px;
+}
 
-        .social-icons a img {
-            width: 60px;
-            height: 60px;
-        }
+@media (max-width: 1080px) {
+    body {
+        overflow: hidden;
+        height: 100%;
+        margin: 0;
+    }
+    .navbar {
+        justify-content: space-around;
+        padding: 10px 5px;
+        background-color: #816C61;
+        border-bottom: 1px solid black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .navbar a {
+        padding: 10px 8px;
+        font-size: 10px;
+    }
+    
+    .container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 80px 10px;
+        max-width: 100%;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        margin-top: 40px;
+        margin-right: 140px;
+    }
+
+    .description {
+        max-width: 100%;
+        text-align: justify;
+        font-size: 9px;
+        margin-top:2%;
+        line-height: 1.4;
+        font-weight: bolder;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 5px;
+        background-color: #131b237b;
+        border: 3px solid black;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .social-icons a {
+        font-size: 1.5em;
+        margin: 0 10px;
+    }
+
+    .social-icons a img {
+        border: 2px solid black;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+    }
+}
