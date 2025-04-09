@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projects.css">
+    <title>My Projects</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="../index.html">HOME</a>
+        <a href="aboutme.html">ABOUT ME</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="hobbies.html">HOBBIES</a>
+        <a href="sociallinks.html">SOCIAL LINKS</a>
+    </div>
+
+    <div class="projects-container">
+        <div class="projects-header">
+            <h1 class="projects-title">My Projects</h1>
+            <p class="projects-subtitle">A showcase of my technical skills and creative work. These projects represent my journey in web development, design, and problem-solving.</p>
+        </div>
+
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="web">Web Development</button>
+            <button class="filter-btn" data-filter="design">UI/UX Design</button>
+            <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+        </div>
+
+        <div class="projects-grid">
+
+            <div class="project-card project-featured fade-in" data-category="mobile">
+                <div class="project-image">
+                    <img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1744217615/Screenshot_2025-04-10_002834_w2rzld.png" alt="LottongPinoy Gaming App">
+                    <span class="project-category">Mobile</span>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">LottongPinoy Gaming App</h3>
+                    <p class="project-description">An interactive mobile gaming application with vibrant visuals, engaging gameplay mechanics, and integrated reward system for players.</p>
+                </div>
+            </div>
+            <!-- Featured Project - Cuddle Paws -->
+            <div class="project-card fade-in" data-category="web">
+                <div class="project-image">
+                    <img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1744217615/Screenshot_2025-04-10_002416_or2ged.png" alt="Cuddle Paws Pet Care Website">
+                    <span class="project-category">Featured</span>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Cuddle Paws Pet Care Website</h3>
+                    <p class="project-description">An e-commerce website for a pet care business featuring a clean interface, product catalog, and secure checkout system built with modern web technologies.</p>
+                </div>
+            </div>
+
+            <!-- Regular Project 3 -->
+            <div class="project-card fade-in" data-category="design">
+                <div class="project-image">
+                    <img src="/api/placeholder/400/200" alt="Project Image">
+                    <span class="project-category">Design</span>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Portfolio Redesign</h3>
+                    <p class="project-description">A complete redesign of my personal portfolio with improved user experience, modern aesthetics, and optimized content presentation.</p>
+                </div>
+            </div>
+
+            <!-- Regular Project 1 - Communiqué Social Platform -->
+            <div class="project-card project-featured fade-in" data-category="web">
+                <div class="project-image">
+                    <img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1744217616/Screenshot_2025-04-10_002513_dbzdwi.png" alt="Communiqué Social Platform">
+                    <span class="project-category">Web</span>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Communiqué Social Platform</h3>
+                    <p class="project-description">A modern social networking platform with interactive features, community building tools, and a sleek interface that promotes user engagement.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"> </script>
+</body>
+</html>

@@ -3,36 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Zj/style.css">
-    <title>Home</title>
+    <title>Zeldrick Jesus | Portfolio</title>
+    <link rel="stylesheet" href="Zj/style.css">
+    <link rel="stylesheet" href="Zj/aboutme.css">
+    <link rel="stylesheet" href="Zj/hobbies.css">
+    <link rel="stylesheet" href="Zj/projects.css">
+    <link rel="stylesheet" href="Zj/sociallinks.css">
+
 </head>
 <body>
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+
     <div class="navbar">
-        <a href="index.html">HOME</a>
-        <a href="./Zj/aboutme.html">ABOUT ME</a>
-        <a href="./Zj/hobbies.html">HOBBIES</a>
-        <a href="./Zj/sociallinks.html">SOCIAL LINKS</a>
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT ME</a>
+        <a href="#hobbies">HOBBIES</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#sociallinks">CONTACT</a>
     </div>
 
-    <div class="container">
-        <div class="profile-content"> 
-            <h1 class="greeting">Hello, my name is</h1>
-            <a href= "./Zj/aboutme.html" class="name" target="_self">Zeldrick Jesus</a>
+    <!-- <div class="social-icons">
+        <a href="./Zj/sociallinks.html"><img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1724414826/Mail_ackbq0.png" alt="Email"></a>
+        <a href="https://www.facebook.com/profile.php?id=100075962705685&mibextid=ZbWKwL"><img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1724414825/Facebook_fhjsta.png" alt="Facebook"></a>
+        <a href="https://github.com/zjdelossantos"><img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1724414826/Github_xgdkhl.png" alt="GitHub"></a>
+        <a href="https://www.instagram.com/prettyboy.zj?igsh=aTlsdjlkY2NmcmV5"><img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1724414826/Instagram_doxlsf.png" alt="Instagram"></a>
+    </div> -->
 
-            <p class="quote">
-                "One of the best programming skills you can <br> have is knowing when to walk away for a <br> while."
-            </p>
-            <p class="quote-author">- Oscar Godson</p>
-            <a href="./Zj/aboutme.html" class="about-button">About Me →</a>
-            <a class="profile-picture"><img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1724414827/profile_pic_uvnttv.jpg" alt="Profile Picture" class="profile-pic"></a>
+    <div id="home" class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="subtitle">Hello, I'm</span>
+                <h1 class="name">Zeldrick Jesus</h1>
+                <p class="description">Aspiring developer passionate about creating intuitive and elegant solutions through code.</p>
+                
+                <div class="quote">
+                    <p class="quote-text">"One of the best programming skills you can have is knowing when to walk away for a while."</p>
+                    <p class="quote-author">- Oscar Godson</p>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="#about" class="btn btn-primary">About Me</a>
+                    <a href="./Zj/projects.html" class="btn btn-outline">View Projects</a>
+                </div>
+            </div>
+            
+            <div class="profile-image">
+                <div class="bg-circle"></div>
+                <div class="profile-pic-container">
+                    <img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1743602117/484968855_659355786606506_1317699557620699043_n_t2xguf.jpg" alt="Profile Picture" class="profile-pic">
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <!-- About Me Section -->
+    <div id="about" class="about-section">
+        <div class="about-container">
+            <img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1743602117/484968855_659355786606506_1317699557620699043_n_t2xguf.jpg" alt="Profile Picture" class="about-profile-pic">
+            <div class="about-description">
+                <h2>About Me</h2>
+                <p>Greetings! I am Zeldrick Jesus Delos Santos, a committed student studying <strong>computer science</strong> at College of Mary Immaculate, with a deep interest in web design and development. While pursuing my Computer Science degree, I have discovered a strong love for creating visually striking and highly efficient web designs.</p>
+                
+                <p>Besides focusing on my academic studies, my knowledge in <strong>Python</strong> allows me to create reliable back-end systems and optimize workflows. With my knowledge of <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>, I can make websites that are engaging and easy for users to use. By developing responsive layouts, adding dynamic features, and guaranteeing cross-browser compatibility, I hope to deliver great online experiences.</p>
+            </div>
+        </div>
+        <div class="skills-section">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-item">HTML5</div>
+                <div class="skill-item">CSS3</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">Web Design</div>
+                <div class="skill-item">Responsive Design</div>
+                <div class="skill-item">UI/UX</div>
+            </div>
         </div>
     </div>
 
-    <div class="social-icons">
-        <a href="./Zj/sociallinks.html"><img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1724414826/Mail_ackbq0.png" alt="Email"></a>
-        <a href="https://www.facebook.com/profile.php?id=100075962705685&mibextid=ZbWKwL"><img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1724414825/Facebook_fhjsta.png"></a>
-        <a href="https://github.com/zjdelossantos"><img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1724414826/Github_xgdkhl.png"></a>
-        <a href="https://www.instagram.com/prettyboy.zj?igsh=aTlsdjlkY2NmcmV5"><img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1724414826/Instagram_doxlsf.png"></a>
+    <!-- Hobbies Section -->
+    <div id="hobbies" class="hobbies-section">
+        <h2 class="section-title">My Hobbies</h2>
+        <div class="hobbies-container">
+            <div class="hobby">
+                <div class="hobby-image-container">
+                    <img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1724414828/sleeping_wcpwme.jpg" alt="Sleeping">
+                </div>
+                <h3>Sleeping</h3>
+            </div>
+            <div class="hobby">
+                <div class="hobby-image-container">
+                    <img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1724414825/basketball_loenct.jpg" alt="Basketball">
+                </div>
+                <h3>Basketball</h3>
+            </div>
+            <div class="hobby">
+                <div class="hobby-image-container">
+                    <img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1724414825/eating_ap6rk9.jpg" alt="Eating">
+                </div>
+                <h3>Eating</h3>
+            </div>
+            <div class="hobby">
+                <div class="hobby-image-container">
+                    <img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1724414827/mobile_games_ukbmld.jpg" alt="Playing Mobile Games">
+                </div>
+                <h3>Playing Mobile Games</h3>
+            </div>
+        </div>
     </div>
+    <div id="projects" class="projects-section">
+    <div class="projects-container">
+        <div class="projects-header">
+            <h1 class="projects-title">My Projects</h1>
+            <p class="projects-subtitle">A showcase of my technical skills and creative work. These projects represent my journey in web development, design, and problem-solving.</p>
+        </div>
+
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="web">Web Development</button>
+            <button class="filter-btn" data-filter="design">UI/UX Design</button>
+            <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+        </div>
+
+        <div class="projects-grid">
+
+            <div class="project-card project-featured fade-in" data-category="mobile">
+                <div class="project-image">
+                    <img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1744217615/Screenshot_2025-04-10_002834_w2rzld.png" alt="LottongPinoy Gaming App">
+                    <span class="project-category">Mobile</span>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">LottongPinoy Gaming App</h3>
+                    <p class="project-description">An interactive mobile gaming application with vibrant visuals, engaging gameplay mechanics, and integrated reward system for players.</p>
+                </div>
+            </div>
+            <!-- Featured Project - Cuddle Paws -->
+            <div class="project-card fade-in" data-category="web">
+                <div class="project-image">
+                    <img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1744217615/Screenshot_2025-04-10_002416_or2ged.png" alt="Cuddle Paws Pet Care Website">
+                    <span class="project-category">Featured</span>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Cuddle Paws Pet Care Website</h3>
+                    <p class="project-description">An e-commerce website for a pet care business featuring a clean interface, product catalog, and secure checkout system built with modern web technologies.</p>
+                </div>
+            </div>
+
+            <!-- Regular Project 3 -->
+            <div class="project-card fade-in" data-category="design">
+                <div class="project-image">
+                    <img src="/api/placeholder/400/200" alt="Project Image">
+                    <span class="project-category">Design</span>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Portfolio Redesign</h3>
+                    <p class="project-description">A complete redesign of my personal portfolio with improved user experience, modern aesthetics, and optimized content presentation.</p>
+                </div>
+            </div>
+
+            <!-- Regular Project 1 - Communiqué Social Platform -->
+            <div class="project-card project-featured fade-in" data-category="web">
+                <div class="project-image">
+                    <img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1744217616/Screenshot_2025-04-10_002513_dbzdwi.png" alt="Communiqué Social Platform">
+                    <span class="project-category">Web</span>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Communiqué Social Platform</h3>
+                    <p class="project-description">A modern social networking platform with interactive features, community building tools, and a sleek interface that promotes user engagement.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sociallinks" class="social-section">
+    <div class="social-links-container">
+        <div class="social-link">
+            <img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1724414826/Mail_ackbq0.png" alt="Mail Icon">
+            <span>zeldrickjoaquin@gmail.com</span>
+        </div>
+        <div class="social-link">
+            <a href="https://www.facebook.com/profile.php?id=100075962705685&mibextid=ZbWKwL"><img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1724414825/Facebook_fhjsta.png" alt="Facebook Icon"></a>
+            <span>Zeldrick Jesus Delos Santos</span>
+        </div>
+        <div class="social-link">
+            <a href="https://github.com/zjdelossantos"><img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1724414826/Github_xgdkhl.png" alt="Github Icon"></a>
+            <span>zjdelossantos</span>
+        </div>
+        <div class="social-link">
+            <a href="https://www.instagram.com/prettyboy.zj?igsh=aTlsdjlkY2NmcmV5"><img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1724414826/Instagram_doxlsf.png" alt="Instagram Icon"></a>
+            <span>@prettyboy.zj</span>
+        </div>
+    </div>
+
+    <script src="Zj/main.js"></script>
 </body>
 </html>
