@@ -2,31 +2,24 @@
 .cv-btn {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #3498db;
+    background: var(--gradient);
     color: white;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     margin-top: 20px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    border: none;
+    transition: all 0.3s ease;
+    border: 3px solid rgba(124, 58, 237, 0.3);
     cursor: pointer;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    filter: grayscale(20%);
 }
 
 .cv-btn:hover {
-    background-color: #2980b9;
-    transform: translateY(-2px);
+    filter: grayscale(0%);
+    transform: scale(1.03);
+    border-color: var(--primary);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 }
 
-/* CV Button in Nav */
-.navbar .cv-nav-btn {
-    background-color: #3498db;
-    padding: 6px 12px;
-    border-radius: 4px;
-    color: white;
-    margin-left: 10px;
-}
-
-.navbar .cv-nav-btn:hover {
-    background-color: #2980b9;
-}
