@@ -35,19 +35,27 @@ body {
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     padding: 1.5rem 3rem;
     z-index: 100;
     transition: all 0.3s ease;
 }
 
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 .navbar a {
     color: var(--light);
     text-decoration: none;
-    margin-left: 2rem;
     font-weight: 500;
     position: relative;
     font-size: 1rem;
     transition: all 0.3s ease;
+    margin-left: 0; /* Remove default margin */
 }
 
 .navbar a:before {
@@ -65,6 +73,25 @@ body {
     width: 100%;
 }
 
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    z-index: 200;
+}
+
+.hamburger-icon {
+    font-size: 1.5rem;
+    color: var(--light);
+    transition: all 0.3s ease;
+}
+
+.hamburger-icon:hover {
+    color: var(--primary);
+}
 /* Main Container */
 .container {
     max-width: 1200px;
@@ -404,15 +431,48 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navbar {
-        justify-content: center;
-        padding: 1rem;
+    .hamburger-menu {
+        display: block;
     }
     
-    .navbar a {
-        margin: 0 0.5rem;
-        font-size: 0.9rem;
+    .navbar {
+        padding: 1rem 2rem;
+        justify-content: flex-end;
     }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Changed from left to right */
+        width: 80%;
+        height: 100vh;
+        flex-direction: column;
+        background-color: rgba(17, 24, 39, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 5rem 2rem 2rem;
+        gap: 2rem;
+        z-index: 100;
+        transition: all 0.4s ease;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    
+    .nav-links.active {
+        right: 0; /* Changed from left to right */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav-links a {
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: left; /* Right-align text */
+    }
+    
+    .hamburger-icon.active i:before {
+        content: "\f00d";  /* Changes to X icon when menu is open */
+    }
+
+
     
     .container {
         padding-top: 6rem;

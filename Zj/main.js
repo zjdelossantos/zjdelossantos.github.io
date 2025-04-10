@@ -72,3 +72,23 @@ filterButtons.forEach(button => {
         });
     });
 });
+
+// Hamburger menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
+    const navLinks = document.querySelector('.nav-links');
+    
+    hamburgerIcon.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        hamburgerIcon.classList.toggle('active');
+    });
+    
+    // Close menu when a link is clicked
+    const links = document.querySelectorAll('.nav-links a');
+    links.forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+            hamburgerIcon.classList.remove('active');
+        });
+    });
+});

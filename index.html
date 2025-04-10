@@ -10,17 +10,25 @@
     <link rel="stylesheet" href="Zj/projects.css">
     <link rel="stylesheet" href="Zj/sociallinks.css">
     <link rel="stylesheet" href="Zj/cv.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="cursor"></div>
     <div class="cursor-dot"></div>
 
     <div class="navbar">
-        <a href="#home">HOME</a>
-        <a href="#about">ABOUT ME</a>
-        <a href="#hobbies">HOBBIES</a>
-        <a href="#projects">PROJECTS</a>
-        <a href="#sociallinks">CONTACT</a>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT ME</a>
+            <a href="#hobbies">HOBBIES</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#sociallinks">CONTACT</a>
+        </div>
     </div>
 
     <div id="home" class="container">
@@ -116,56 +124,56 @@
 
         <div class="project-filters">
             <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="web">Web Development</button>
-            <button class="filter-btn" data-filter="design">UI/UX Design</button>
-            <button class="filter-btn" data-filter="mobile">Game App</button>
+            <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+            <button class="filter-btn" data-filter="socialapp">Social Media App</button>
+            <button class="filter-btn" data-filter="game">Game App</button>
         </div>
 
         <div class="projects-grid">
 
-            <div class="project-card project-featured fade-in" data-category="mobile">
+            <div class="project-card project-featured fade-in" data-category="game">
                 <div class="project-image">
                     <img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1744217615/Screenshot_2025-04-10_002834_w2rzld.png" alt="LottongPinoy Gaming App">
                     <span class="project-category">Game App</span>
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">LottongPinoy Gaming App</h3>
-                    <p class="project-description">An interactive mobile gaming application with vibrant visuals, engaging gameplay mechanics, and integrated reward system for players.</p>
+                    <p class="project-description">LottongPinoy is a quick lotto-style mobile game where users can pick numbers, place bets, and instantly check results. With engaging visuals and a built-in reward system, players can enjoy a fun, fast-paced lottery experience anytime, anywhere.</p>
                 </div>
             </div>
             <!-- Featured Project - Cuddle Paws -->
-            <div class="project-card fade-in" data-category="web">
+            <div class="project-card fade-in" data-category="ecommerce">
                 <div class="project-image">
                     <img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1744217615/Screenshot_2025-04-10_002416_or2ged.png" alt="Cuddle Paws Pet Care Website">
-                    <span class="project-category">Pet Store</span>
+                    <span class="project-category">Online Pet Store</span>
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">Cuddle Paws Pet Care Website</h3>
-                    <p class="project-description">An e-commerce website for a pet care business featuring a clean interface, product catalog, and secure checkout system built with modern web technologies.</p>
+                    <h3 class="project-title">Cuddle Paws Pet Care</h3>
+                    <p class="project-description">Cuddle Paws is an online pet store where users can browse a variety of pet care products, add items to their cart, and securely purchase them through an easy-to-use checkout system.</p>
                 </div>
             </div>
 
             <!-- Regular Project 3 -->
-            <div class="project-card fade-in" data-category="design">
+            <div class="project-card fade-in" data-category="socialapp">
                 <div class="project-image">
-                    <img src="/api/placeholder/400/200" alt="Project Image">
-                    <span class="project-category">Design</span>
+                    <img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1744266432/Screenshot_2025-04-10_142609_yeay8i.png" alt="Project Image">
+                    <span class="project-category">News-like Application</span>
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">Portfolio Redesign</h3>
-                    <p class="project-description">A complete redesign of my personal portfolio with improved user experience, modern aesthetics, and optimized content presentation.</p>
+                    <h3 class="project-title">New York Times</h3>
+                    <p class="project-description">This app provides users with an intuitive platform to browse and read the latest news, featuring well-organized sections and a streamlined reading experience.</p>
                 </div>
             </div>
 
             <!-- Regular Project 1 - Communiqué Social Platform -->
-            <div class="project-card project-featured fade-in" data-category="web">
+            <div class="project-card project-featured fade-in" data-category="socialapp">
                 <div class="project-image">
                     <img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1744217616/Screenshot_2025-04-10_002513_dbzdwi.png" alt="Communiqué Social Platform">
-                    <span class="project-category">Social Media App</span>
+                    <span class="project-category">Thread-like Application</span>
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">Communiqué Social Platform</h3>
-                    <p class="project-description">A modern social networking platform with interactive features, community building tools, and a sleek interface that promotes user engagement.</p>
+                    <h3 class="project-title">Communique </h3>
+                    <p class="project-description">Communiqué is a social networking platform inspired by Threads, allowing users to post short updates, engage in discussions, follow others, and interact through likes and comments.</p>
                 </div>
             </div>
         </div>
