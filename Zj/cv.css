@@ -1,0 +1,32 @@
+/* CV Button Styles */
+.cv-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cv-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* CV Button in Nav */
+.navbar .cv-nav-btn {
+    background-color: #3498db;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: white;
+    margin-left: 10px;
+}
+
+.navbar .cv-nav-btn:hover {
+    background-color: #2980b9;
+}
