@@ -28,8 +28,19 @@ themeBtn.addEventListener('click',()=>{ dark=!dark; applyTheme(); });
 // ─── HAMBURGER ───
 const ham=document.getElementById('hamburger');
 const mNav=document.getElementById('mobileNav');
-ham.addEventListener('click',()=>mNav.classList.add('open'));
-function closeMobileNav(){ mNav.classList.remove('open'); }
+ham.addEventListener('click',()=>{
+  if(mNav.classList.contains('open')){
+    mNav.classList.remove('open');
+    ham.classList.remove('active');
+  } else {
+    mNav.classList.add('open');
+    ham.classList.add('active');
+  }
+});
+function closeMobileNav(){ 
+  mNav.classList.remove('open');
+  ham.classList.remove('active');
+}
 document.getElementById('closeNav').addEventListener('click',closeMobileNav);
 
 // ─── SMOOTH SCROLL ───
@@ -66,3 +77,22 @@ filterBtns.forEach(btn=>{
     });
   });
 });
+
+// ─── CONTACT FORM ───
+const contactForm=document.getElementById('contactForm');
+if(contactForm){
+  contactForm.addEventListener('submit',function(e){
+    e.preventDefault();
+    
+    const name=document.getElementById('name').value;
+    const email=document.getElementById('email').value;
+    const subject=document.getElementById('subject').value;
+    const message=document.getElementById('message').value;
+    
+    // Create Gmail URL with pre-filled data
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=zeldrickjoaquin@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
+    
+    // Open Gmail in new tab
+    window.open(gmailUrl, '_blank');
+  });
+}
