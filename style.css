@@ -469,6 +469,15 @@ section {
 .proj-body h3 {
   font-family:'Syne',sans-serif; font-size:1.25rem; font-weight:700;
 }
+.proj-body h3 a {
+  color: var(--text);
+  text-decoration: none;
+  transition: text-decoration 0.2s ease;
+}
+
+.proj-body h3 a:hover {
+  text-decoration: underline;
+}
 .proj-body p {
   color:var(--text2); font-size:0.9rem; line-height:1.7; flex:1;
 }
