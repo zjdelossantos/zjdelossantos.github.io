@@ -59,25 +59,6 @@ const obs=new IntersectionObserver(entries=>{
 },{threshold:0.12});
 reveals.forEach(r=>obs.observe(r));
 
-// ─── PROJECT FILTER ───
-const filterBtns=document.querySelectorAll('.filter-btn');
-const projCards=document.querySelectorAll('.project-card');
-filterBtns.forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    filterBtns.forEach(b=b.classList.remove('active'));
-    btn.classList.add('active');
-    const filter = btn.getAttribute('data-filter');
-    projCards.forEach(card => {
-      if (filter === 'all' || card.getAttribute('data-cat') === filter) {
-        card.style.display = '';
-        card.style.opacity = '1';
-      } else {
-        card.style.display = 'none';
-      }
-    });
-  });
-});
-
 // ─── CONTACT FORM ───
 const contactForm=document.getElementById('contactForm');
 if(contactForm){
