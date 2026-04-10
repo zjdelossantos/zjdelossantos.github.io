@@ -25,23 +25,35 @@ function applyTheme(){
 applyTheme();
 themeBtn.addEventListener('click',()=>{ dark=!dark; applyTheme(); });
 
-// ─── HAMBURGER ───
+// ---- HAMBURGER ----
 const ham=document.getElementById('hamburger');
-const mNav=document.getElementById('mobileNav');
+const navLinks=document.querySelector('.nav-links');
 ham.addEventListener('click',()=>{
-  if(mNav.classList.contains('open')){
-    mNav.classList.remove('open');
+  if(navLinks.classList.contains('open')){
+    navLinks.classList.remove('open');
     ham.classList.remove('active');
   } else {
-    mNav.classList.add('open');
+    navLinks.classList.add('open');
     ham.classList.add('active');
   }
 });
-function closeMobileNav(){ 
-  mNav.classList.remove('open');
-  ham.classList.remove('active');
-}
-document.getElementById('closeNav').addEventListener('click',closeMobileNav);
+
+// ---- CLOSE NAV ON LINK CLICK (MOBILE) ----
+const navItems=document.querySelectorAll('.nav-links a');
+navItems.forEach(item=>{
+  item.addEventListener('click',()=>{
+    navLinks.classList.remove('open');
+    ham.classList.remove('active');
+  });
+});
+
+// ---- CLOSE NAV ON RESIZE TO DESKTOP ----
+window.addEventListener('resize',()=>{
+  if(window.innerWidth > 960){ 
+    navLinks.classList.remove('open');
+    ham.classList.remove('active');
+  }
+});
 
 // ─── SMOOTH SCROLL ───
 document.querySelectorAll('a[href^="#"]').forEach(a=>{

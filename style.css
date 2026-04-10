@@ -149,28 +149,26 @@ nav {
   top:8px; transform:rotate(-135deg);
 }
 
-/* ─── MOBILE NAV ─── */
-.mobile-nav {
-  display:none; position:fixed; top:0; right:-100%; width:80%; max-width:320px; height:100vh; z-index:400;
-  background:var(--card); border-left:1px solid var(--border); flex-direction:column;
-  align-items:flex-start; justify-content:flex-start; gap:1rem; padding:5rem 2rem 2rem;
-  transition:right 0.3s ease; box-shadow:-5px 0 20px rgba(0,0,0,0.2);
+/* ---- RESPONSIVE NAVBAR ---- */
+@media(max-width:960px){
+  .nav-links {
+    position:fixed; top:68px; right:-100%; width:80%; max-width:320px; height:calc(100vh - 68px); z-index:400;
+    background:var(--card); border-left:1px solid var(--border); flex-direction:column;
+    align-items:flex-start; justify-content:flex-start; gap:1rem; padding:2rem;
+    transition:right 0.3s ease; box-shadow:-5px 0 20px rgba(0,0,0,0.2);
+  }
+  .nav-links.open { right:0; }
+  .nav-links a {
+    font-family:'Syne',sans-serif; font-size:1.2rem; font-weight:600;
+    text-decoration:none; color:var(--text);
+    transition:all 0.3s; padding:0.5rem 0; width:100%;
+    border-bottom:1px solid transparent;
+  }
+  .nav-links a:hover { color:var(--primary); border-bottom-color:var(--primary); }
+  .theme-btn {
+    position:absolute; bottom:2rem; left:2rem;
+  }
 }
-.mobile-nav.open { right:0; display:flex; }
-.mobile-nav a {
-  font-family:'Syne',sans-serif; font-size:1.2rem; font-weight:600;
-  text-decoration:none; color:var(--text);
-  transition:all 0.3s; padding:0.5rem 0; width:100%;
-  border-bottom:1px solid transparent;
-}
-.mobile-nav a:hover { color:var(--primary); border-bottom-color:var(--primary); }
-.close-btn {
-  position:absolute; top:1.5rem; right:1.5rem;
-  background:none; border:none; color:var(--text);
-  font-size:1.5rem; cursor:pointer; padding:0.5rem;
-  border-radius:8px; transition:all 0.3s;
-}
-.close-btn:hover { background:var(--bg3); color:var(--primary); }
 
 /* ─── HERO ─── */
 #home {
@@ -602,7 +600,6 @@ footer span { color:var(--primary); }
   .skills-grid { gap:0.5rem; }
   .skill-chip { font-size:0.85rem; padding:6px 12px; }
   .contact-form { padding:2rem 1.5rem; }
-  .mobile-nav { width:85%; padding:5rem 2rem 2rem; }
 }
 
 @media(max-width:600px){
@@ -623,8 +620,6 @@ footer span { color:var(--primary); }
   .proj-title { font-size:1.2rem; }
   .contact-grid { gap:1.5rem; }
   .contact-form { padding:1.5rem 1rem; }
-  .mobile-nav { width:90%; max-width:280px; padding:5rem 1.5rem 1.5rem; }
-  .mobile-nav a { font-size:1.1rem; }
 }
 
 @media(max-width:480px){
@@ -639,6 +634,4 @@ footer span { color:var(--primary); }
   .proj-body { padding:1rem; }
   .proj-title { font-size:1.1rem; }
   .contact-form { padding:1rem 0.8rem; }
-  .mobile-nav { width:95%; max-width:260px; padding:5rem 1rem 1rem; }
-  .mobile-nav a { font-size:1rem; }
 }
